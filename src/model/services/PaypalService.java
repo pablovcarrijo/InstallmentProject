@@ -2,12 +2,18 @@ package model.services;
 
 public class PaypalService implements OnlineService {
 
+	private static final double FRE_PARCENTAGE = 0.02;
+
+	private static final double MONTHLY_INTEREST = 0.01;
+	
+	@Override
 	public double paymentFree(double amount) {
-		return amount * 0.02;
+		return amount * FRE_PARCENTAGE;
 	}
 	
-	public double interest(double amount, Integer months) {
-		return amount * 0.01 * months;
+	@Override
+	public double interest(double amount, int months) {
+		return amount * MONTHLY_INTEREST * months;
 	}
 	
 }

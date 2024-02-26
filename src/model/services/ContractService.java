@@ -13,8 +13,8 @@ public class ContractService {
 		this.onlineService = onlineService;
 	}
 	
-	public void processContract(Contract contract, Integer months) {
-		Double valuePerMonth = contract.getTotalValue() / months;
+	public void processContract(Contract contract, int months) {
+		double valuePerMonth = contract.getTotalValue() / months;
 		for(int i = 1; i <= months; i ++) {
 			LocalDate dueDate = contract.getDate().plusMonths(i);
 			double interest = onlineService.interest(valuePerMonth, i);

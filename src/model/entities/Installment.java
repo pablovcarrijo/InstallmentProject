@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Installment {
 
-	private double amount;
+	private Double amount;
 	private LocalDate dueDate;
 	
 	private DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -15,11 +15,11 @@ public class Installment {
 		setDueDate(dueDate);
 	}
 
-	public double getAmount() {
+	public Double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(double amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 
